@@ -21,7 +21,7 @@ function Experience() {
             ref={containerRef}
             className="w-full relative pb-section-md"
         >
-            <div className="container mx-auto max-w-4xl relative px- md:px-8">
+            <div className="container mx-auto max-w-4xl relative md:px-8">
                 <motion.h2 
                     variants={itemVariants}
                     initial="hidden"
@@ -51,13 +51,13 @@ function Experience() {
                                     key={exp.id}
                                     className="sticky w-full flex items-start"
                                     style={{ 
-                                        top: `calc(20vh + ${idx * 80}px)`, 
-                                        marginBottom: isLast ? '0' : '10vh'
+                                        top: `calc(10dvh + ${idx * 3}rem)`, 
+                                        marginBottom: isLast ? '10vh' : '15vh'
                                     }}
                                 >
                                     {/* Timeline Dot */}
                                     <div className="relative flex items-center justify-center w-[46px] shrink-0 pt-6">
-                                        <div className="w-4 h-4 rounded-full border-2 border-white bg-navy z-20" />
+                                        <div className="w-4 h-4 rounded-full border-2 border-white bg-[#0B1221] z-20" />
                                     
                                         <div className="hidden lg:block absolute right-12 whitespace-nowrap text-xl text-gray/70 font-light opacity-100 pr-4">
                                             {exp.date.split(' - ')[0]}
@@ -67,22 +67,22 @@ function Experience() {
                                     {/* Card Content */}
                                     <div className="ml-4 w-full">
                                         <motion.div
-                                            initial={{ opacity: 0, y: 50 }}
+                                            initial={{ opacity: 0, y: 30 }}
                                             whileInView={{ opacity: 1, y: 0 }}
-                                            viewport={{ margin: "-100px", once: true }}
-                                            transition={{ duration: 0.5, delay: 0.1 }}
+                                            viewport={{ margin: "0px 0px -50px 0px", once: true }}
+                                            transition={{ duration: 0.4, delay: 0.05 }}
                                         >
-                                            <Card className="p-4 sm:p-6">
+                                            <Card className="p-4 sm:p-6 bg-[#0c1424] md:bg-white-subtle backdrop-blur-none md:backdrop-blur-md border border-white/5 shadow-2xl">
                                                 <h3 className="text-lg sm:text-xl font-semibold">{exp.title}</h3>
-                                                <p className="text-gray text-sm">{exp.date}</p>
-                                                <ul className="list-disc list-inside mt-2 text-gray">
+                                                <p className="text-gray text-sm md:hidden">{exp.date}</p>
+                                                <ul className="list-disc list-inside mt-3 text-gray space-y-1">
                                                     {exp.description.split('\n').filter(Boolean).map((line, i) => (
-                                                        <li key={i}>{line}</li>
+                                                        <li key={i} className="text-sm md:text-base">{line}</li>
                                                     ))}
                                                 </ul>
                                                 <div className="flex flex-wrap gap-2 mt-4">
                                                     {exp.badges.map((badge, index) => (
-                                                        <Badge key={index} variant="secondary">{badge}</Badge>
+                                                        <Badge key={index} variant="secondary" className="bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">{badge}</Badge>
                                                     ))}
                                                 </div>
                                             </Card>

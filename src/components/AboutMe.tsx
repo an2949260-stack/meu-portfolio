@@ -16,17 +16,17 @@ function AboutMe() {
     return (
         <Section 
             id="about" 
-            className="flex flex-col md:flex-row md:gap-10 gap-4 md:pt-section-md"         
+            className="flex flex-col lg:flex-row lg:gap-10 gap-6 md:pt-section-md"         
         >
-            <motion.div variants={itemVariants} className="w-full md:w-auto">
-                <Card className=' p-2 shrink-0 w-full justify-center'>
-                    <figure className='md:h-[32.2rem] md:w-96 h-96 w-full object-contain rounded-lg'>
+            <motion.div variants={itemVariants} className="w-full lg:w-auto flex justify-center">
+                <Card className='p-2 shrink-0 w-full lg:w-full justify-center'>
+                    <figure className='lg:h-[32.2rem] lg:w-96 md:h-[28rem] h-96 w-full object-contain rounded-lg'>
                         <img src={ABOUT_CONTENT.img.src} alt={ABOUT_CONTENT.img.alt} className=" rounded-lg w-full h-full object-cover" />
                     </figure>
                 </Card>
             </motion.div>
         
-            <motion.div variants={itemVariants} className='flex flex-col text-gray md:flex-1  md:gap-4 w-full'>
+            <motion.div variants={itemVariants} className='flex flex-col text-gray lg:flex-1 md:gap-4 gap-3 w-full'>
                 <h2 className='md:text-5xl text-3xl font-semibold text-white'>{ABOUT_CONTENT.title}</h2>
                 
                 <div>

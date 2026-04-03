@@ -107,7 +107,7 @@ function Projects({ title }: ProjectsProps) {
                         </div>
 
                         {/* Perspective Image Stack */}
-                        <div className="w-full lg:flex-1 relative z-10 flex items-center justify-center h-[480px] sm:h-[500px] md:h-full md:w-[500px]">
+                        <div className="w-full lg:flex-1 relative z-10 flex items-center justify-center h-[480px] sm:h-[550px] md:h-[650px] lg:h-full lg:w-[500px]">
                             {PROJECT_CONTENT.map((project, idx) => {
                                 const isActive = idx === activeIndex;
                                 const isPast = idx < activeIndex;
@@ -153,21 +153,21 @@ function Projects({ title }: ProjectsProps) {
                                             ease: [0.16, 1, 0.3, 1]
                                         }}
                                     >
-                                        <Card className="p-2 w-[85vw] sm:w-[530px] lg:w-auto bg-[#0F1928] max-md:backdrop-blur-none">
-                                            <figure className="w-full h-[170px] md:h-[300px] md:w-[500px]">
+                                        <Card className="p-2 w-[85vw] sm:w-[530px] lg:w-auto bg-[#0F1928] lg:bg-white-subtle/40 backdrop-blur-none lg:backdrop-blur-md">
+                                            <figure className="w-full h-[170px] sm:h-[240px] md:h-[280px] lg:h-[300px] lg:w-[500px]">
                                                 <img
                                                     src={project.image}
                                                     alt={project.title}
                                                     className="w-full h-full object-cover rounded-md "
                                                 />
                                             </figure>
-                                            {/* Informações Visíveis Apenas no Mobile */}
-                                            <div className="flex lg:hidden flex-col gap-2 mt-4 px-2 pb-2 text-left">
+                                            {/* Informações Visíveis Apenas no Mobile/Tablet */}
+                                            <div className="flex lg:hidden flex-col gap-2 mt-4 px-2 pb-3 text-left">
                                                 <div className="flex flex-col gap-1">
-                                                    <h3 className="text-xl font-bold">{project.title}</h3>
-                                                    <span className="text-sm text-gray/70">{project.category}</span>
+                                                    <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
+                                                    <span className="text-sm md:text-base text-gray/70">{project.category}</span>
                                                 </div>
-                                                <p className="text-sm text-gray line-clamp-3 mt-1">
+                                                <p className="text-sm md:text-base text-gray line-clamp-3 md:line-clamp-4 mt-1">
                                                     {project.description}
                                                 </p>
                                                 <div className="flex flex-wrap gap-2 mt-2">
@@ -177,7 +177,7 @@ function Projects({ title }: ProjectsProps) {
                                                 </div>
                                                 <div className="w-full mt-4">
                                                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full">
-                                                        <Button variant="default" size="sm" className="w-full py-5">Ver Projeto</Button>
+                                                        <Button variant="default" size="default" className="w-full py-5 md:py-6">Ver Projeto</Button>
                                                     </a>
                                                 </div>
                                             </div>

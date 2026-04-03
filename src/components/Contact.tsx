@@ -11,7 +11,7 @@ function Contact () {
             className="flex flex-col items-start justify-start gap-6 pb-section-md"
         >
             <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl font-semibold text-white text-start">{CONTACT_CONTENT.title}</motion.h2>
-            <motion.p variants={itemVariants} className="text-2xl md:text-4xl text-gray max-w-3xl">
+            <motion.p variants={itemVariants} className="text-2xl md:text-3xl lg:text-4xl text-gray max-w-3xl">
                 {CONTACT_CONTENT.description}
             </motion.p>
             <motion.div variants={itemVariants} className="flex gap-4">

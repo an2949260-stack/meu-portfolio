@@ -24,10 +24,10 @@ function Hero() {
     return (
         <Section
             id="home"
-            className="flex justify-center flex-col gap-5 md:gap-7 md:h-full h-[80dvh] my-[5%]  md:py-section-md pb-section-md"
+            className="flex justify-center flex-col gap-5 md:gap-7 md:h-full h-full pt-20 pb-32 my-[5%]  md:py-section-md pb-section-md"
             animate="visible"
         >
-            <motion.h1 variants={itemVariants} className="text-4xl md:text-7xl font-bold block text-white/70">
+            <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold block text-white/70">
                 {HERO_CONTENT.title}
                 <br />
                 <span className="text-white block min-h-[1.3em] mt-1 md:mt-2">
@@ -65,7 +65,7 @@ function Hero() {
                     </AnimatePresence>
                 </span>
             </motion.h1>
-            <motion.p variants={itemVariants} className="text-2xl md:text-4xl text-gray max-w-3xl rounded-">
+            <motion.p variants={itemVariants} className="text-2xl md:text-3xl lg:text-4xl text-gray max-w-3xl">
                 {HERO_CONTENT.description}
             </motion.p>
             <motion.div variants={itemVariants} className="flex md:gap-6 gap-3">
