@@ -1,7 +1,7 @@
 import { Header } from "./components/Header"
 import Hero from "./components/Hero"
 import AboutMe from "./components/AboutMe"
-import Projects from "./components/Projects"
+import { Projects } from "./components/Projects"
 import Experience from "./components/Experience"
 import Skills from "./components/Skills"
 import Contact from "./components/Contact"
@@ -17,7 +17,7 @@ function App() {
   const sections: Section[] = [
     { id: "home", label: "Home", component: <Hero /> },
     { id: "about", label: "Sobre", component: <AboutMe /> },
-    { id: "projects", label: "Projetos", component: <Projects title="Projetos" /> },
+    { id: "projects", label: "Projetos", component: <Projects /> },
     { id: "experience", label: "Experiência", component: <Experience /> },
     { id: "skills", label: "Skills", component: <Skills /> },
     { id: "contact", label: "Contato", component: <Contact /> },
